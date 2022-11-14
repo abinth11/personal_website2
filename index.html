@@ -706,7 +706,8 @@
                 <div class="col-lg-8">
                     <div class="contact-form-card">
                         <h4 class="contact-title">Send a message</h4>
-                        <form action=""  id="submit-form">
+                        
+                        <form action=""  id="submit-form" name="contactform">
                             <div class="form-group">
                                 <input  class="form-control" type="text" name="name" id="name" placeholder="Name *" required>
                             </div>
@@ -717,8 +718,9 @@
                                 <textarea class="form-control" id="" name="message" itemid="message" placeholder="Type here...*" rows="7" required></textarea>
                             </div>
                             <div class="form-group ">
-                                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
+                                <button type="submit" class="form-control btn btn-primary" id="sub">Send Message</button>
                             </div>
+                          
                         </form>
                     </div>
                 </div>
@@ -787,6 +789,8 @@
 
     <!-- JohnDoe js -->
     <script src="public_html/assets/js/johndoe.js"></script>
+
+
     <script>
         $("#submit-form").submit((e)=>{
             e.preventDefault()
