@@ -11,6 +11,7 @@
     <!-- Bootstrap + JohnDoe main styles -->
 	<link rel="stylesheet" href="public_html/assets/css/johndoe.css">
     <link rel="icon" href="public_html/Images/icon.jpg" type="image/jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <a href="public_html/components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i class="ti-shift-left-alt"></i> Components</a>
@@ -705,7 +706,7 @@
                 <div class="col-lg-8">
                     <div class="contact-form-card">
                         <h4 class="contact-title">Send a message</h4>
-                        <form action="https://script.google.com/macros/s/AKfycbzD3yjor40ULGzVeZEbflPsf2l9scBSkUVyiq1cXSt5GA-_PIblYvhiPe6onXXHCvG_7A/exec" method="post" id="gform">
+                        <form action=""  id="submit-form">
                             <div class="form-group">
                                 <input  class="form-control" type="text" name="name" id="name" placeholder="Name *" required>
                             </div>
@@ -786,6 +787,25 @@
 
     <!-- JohnDoe js -->
     <script src="public_html/assets/js/johndoe.js"></script>
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbzD3yjor40ULGzVeZEbflPsf2l9scBSkUVyiq1cXSt5GA-_PIblYvhiPe6onXXHCvG_7A/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 
 </body>
 </html>
