@@ -11433,6 +11433,7 @@ pre .code {
   box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
   width: 170px;
   border-radius: 50%;
+  /* object-fit: cover; */
 }
 
 .navbar .brand .brand-txt {
