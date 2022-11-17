@@ -415,13 +415,13 @@
                         
                         <form action=""  id="submit-form" name="contactform">
                             <div class="form-group">
-                                <input  class="form-control" type="text" name="name" id="name" placeholder="Name *" required>
+                                <input  class="form-control" type="text" name="name" id="name" placeholder="Name *" required minlength="3" maxlength="25">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="email" name="email" id="email"  placeholder="Email *" required>
+                                <input class="form-control" type="email" name="email" id="email"  placeholder="Email *" required minlength="4" maxlength="25">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" id="" name="message" itemid="message" placeholder="Type here...*" rows="7" required></textarea>
+                                <textarea class="form-control" id="" name="message" itemid="message" placeholder="Type here...*" rows="7" required minlength="10" maxlength="100"></textarea>
                             </div>
                             <div class="form-group ">
                                 <button type="submit" class="form-control btn btn-primary" id="sub">Send Message</button>
