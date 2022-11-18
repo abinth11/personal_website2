@@ -11683,3 +11683,14 @@ pre .code {
   display: block;
   margin-top: 10px;
 }
+
+.errors{
+  color: red;
+}
+/* .error{
+  border-color: red;
+}
+.success{
+  border-color: green;
+  background-color: greenyellow;
+} */

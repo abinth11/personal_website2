@@ -412,14 +412,18 @@
                         <h4 class="contact-title">Send a message</h4>
                         
                         <form action=""  id="submit-form" name="contactform">
-                            <div class="form-group">
-                                <input  class="form-control" type="text" name="name" id="name" placeholder="Name *" required minlength="3" maxlength="25">
+                            <div class="form-group error succuss">
+                                <input  class="form-control error" type="text" name="name" id="name" placeholder="Name *" >
+                                <small class="errors"></small>
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" name="email" id="email"  placeholder="Email *" required minlength="4" maxlength="25">
+                            <div class="form-group  success">
+                                <input class="form-control error" type="email" name="email" id="email"  placeholder="Email *">
+                                <small class="errors"></small>
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="" name="message" itemid="message" placeholder="Type here...*" rows="7" required minlength="10" maxlength="100"></textarea>
+                            <div class="form-group error succuss">
+                                <!-- <input class="form-control" type="text" name="message" id="message"  placeholder="Message *" > -->
+                                <textarea class="form-control error" id="message" name="message"  placeholder="Type here...*" rows="7"></textarea>
+                                <small class="errors"></small>
                             </div>
                             <div class="form-group ">
                                 <button type="submit" class="form-control btn btn-primary" id="sub">Send Message</button>
@@ -482,6 +486,11 @@
      <!-- Bootstrap + JohnDoe main styles -->
      
      <link rel="icon" href="public_html/Images/icon.jpg" type="image/jpg">
+
+
+     <script src="validate.js"></script>
+
+
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<!-- core  -->
@@ -502,23 +511,7 @@
 
 
     <script>
-        $("#submit-form").submit((e)=>{
-            e.preventDefault()
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbzD3yjor40ULGzVeZEbflPsf2l9scBSkUVyiq1cXSt5GA-_PIblYvhiPe6onXXHCvG_7A/exec",
-                data:$("#submit-form").serialize(),
-                method:"post",
-                success:function (response){
-                    alert("Form submitted successfully")
-                    window.location.reload()
-                    //window.location.href="https://google.com"
-                },
-                error:function (err){
-                    alert("Something Error")
-    
-                }
-            })
-        })
+       
     </script>
 
 </body>
